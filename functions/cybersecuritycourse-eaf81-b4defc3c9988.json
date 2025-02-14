@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cybersecuritycourse-eaf81",
+  "private_key_id": "b4defc3c99889a001982d2cda3a9888054231563",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDB2tOZDTnD0Cio\naw++x7X5JDdp/btZ8AUBDLnAl2YH86/b6uPSYNF3gO3+SP8mjoaUuhN4liTJgL+B\nNa6eLt8z9DUNWKDX06bFMKBJ5d7n/nB1COT5BTBurKKBARn/tXBs0uFVW63lOiNO\n1DNdbj/FwVul3L9BeXUNFqmyfAiR43GtJ6mPsP6NVjJUOsUv14YnwHWfCUbvU0RN\ngt5SnWx3ZfYTCKXtpGKmB4vhbqbO289JTyP+ZkVoi0zhMo4R9INbfM9EdxKC2Kj9\nrmgHy8lWJ1XSmsO3m6/jkz9n+wT8a79jTdNgFjE+RbxKq2KySTNBVnKb90pdzt83\n6p3+v75vAgMBAAECggEAGstGhe1oYjf09q+y7G6pffcohZ42yraR1SmkybQ4u7lN\n7E//ZJunOCT6QDRnYoqT8B32r6spCIT4Hewv54NDrJMA0N3C1YdWkgN86YSRQRr6\nVjgq1dSGyN/+/Lph6pBx1UjMhmzL5gFu0egjSrMAs4ex8C9JFsv/3BWZfPxcfuAQ\nJhPwonFniC/fpV8BP1vjh/owQGwSZ6fvfqM6pz+lewe4xtvMpDI/VDZAEhkzanOC\nlYi0uBU0qveItyVSgI6IzOK8vFcbHugaoyB/U7VSvN7qq5B8Bhk8+xW53Am37VWd\nb2rwGxKdJyHi5PxjZZr8+vzXSdTn0VOEh0dmbMJUiQKBgQD13fFgzOmY4xo5IArK\nAgi3i303ForGVSD1E1SEPVHuB7YYmGryZ7HdIZMZVbjvHyXBTQWeuSciAk1VfCzg\nUy+2+u33m9lMug5m8sWiK7LWjl5p3h5VEdHbzW+107Olus8zY6FEkWL2/b9UhZsn\nstvm4RRzCbLLrHcMpSiKYT9atQKBgQDJ2B8K8VCPJ5b9J0z87iZyyK2wRuZns9Hj\nHwLNbqOexFLhsTz6ISIUcMTG3hVxWDAm2EFa+CbqfsH5bdawrakEUC30Y4Wf23u2\nxiLpjq5OVP9Rm0xtjqT5ONoY7VK5hXOVflvZAwUHM1XXoamyeieeJV3KSg315tKf\nMzVyjybXEwKBgQDiEeU0QLY54ffmttO00xH40sWbtZp8qyHWtqNrxIZk+6owC1Wq\n9jXRQmHjVbLqDBXHG28jdtPIrZ02ESuiSFsDQM82cZLovdsoRen7J3sVVWrypU32\nop/4H3msErCInrCOa/mI9rWsrb0TlpYHdqpELImFDVHdfQMqGWKherGqUQKBgC25\n/3ZcKvLzdhpNz/ww+5bfbbHUrhfqPe9lNB5UJU8vjNNCctz7qpvU3E9tOpBd+TKj\npVK1iyNuqgUW5B9MiFDI1VBbR4dqksFaa8hboZNvYBQdyZe8TBWF0qr5ANe0qvXA\nFZC5RWdXMuhR4H7le5oxPuk4E6eUrjyQvlgApDzvAoGAOWgvLJDc2KHBJ5iFlT4I\nxJR46Ooa+bgaOeS/iI07+R66S+f+5at87vBajN1OJWHpSZr/uAsCG+dqX/BPud64\nyjts8PCSuXKTFQmfxuXnGnr2iEka2F1zK+fmiszgkXoedl2qBVgC4X9eQBckkmoU\naTTda1eesEDWQAsr4+hEwOE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "course@cybersecuritycourse-eaf81.iam.gserviceaccount.com",
+  "client_id": "112714785269084123437",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/course%40cybersecuritycourse-eaf81.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
