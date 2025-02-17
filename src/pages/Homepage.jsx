@@ -12,8 +12,10 @@ import {
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material'; 
 import { loginWithEmailAndPassword, createUserWithEmailAndPassword, LoggedUser , sendResetPasswordEmail} from '../services/authService';
+import useNavigationButton from '../hooks/NavigationContext';
 
 const Homepage = () => { 
+const { handleNavigationClick } = useNavigationButton('Menu');
 	const [isVisible, setIsVisible] = useState(false);
 	const [isLogin, setIsLogin] = useState(true);
 	const [isResetPassword, setIsResetPassword] = useState(false);
@@ -54,7 +56,7 @@ const Homepage = () => {
 				await loginWithEmailAndPassword(formData.email, formData.password);
 				if (LoggedUser.get()) {
 					if (LoggedUser.get().isPaying == true) {
-						 window.location.href = '/Menu'
+						handleNavigationClick();
 					} else {
 						setIsPaying(true);
 					}

@@ -1,23 +1,21 @@
-import { createContext, useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import routesConfig from '../routes/routesConfig';
 
-// Criando o contexto de navegação
-const NavigationContext = createContext();
+const useNavigationButton = (pageToNavigate) => { 
+    const navigate = useNavigate();
 
-// Hook personalizado para usar o contexto
-export const useNavigation = () => useContext(NavigationContext);
+    const locations = routesConfig.map(route => {
+		return route.path;
+    });
 
-// Provider para fornecer o contexto
-export const NavigationProvider = ({ children }) => {
-  const [currentComponent, setCurrentComponent] = useState('Homepage');
+    const path = locations.filter(path => pageToNavigate === path).toString()
 
-  // Função para atualizar o componente
-  const navigateTo = (component) => {
-    setCurrentComponent(component);
-  };
+    const handleNavigationClick = () =>{ 
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        navigate(`/${path}`)
+    }
+    
+    return { handleNavigationClick };
+}
 
-  return (
-    <NavigationContext.Provider value={{ currentComponent, navigateTo }}>
-      {children}
-    </NavigationContext.Provider>
-  );
-};
+export default useNavigationButton;
