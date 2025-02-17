@@ -1,35 +1,39 @@
 import './App.css';
 import Layout from '../layout/layout';
-import { NavigationProvider, useNavigation } from '../hooks/NavigationContext';
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const context = import.meta.globEager('/src/pages/**/*.jsx');
 
 const pages = Object.keys(context).map(path => {
-  const value = context[path].default;
-  const componentName = path.split('/').pop().replace('.jsx', '');
-  return { componentName, component: value };
+  const Component = context[path].default;
+  const routePath = path
+    .replace('/src/pages', '')  // Remove a pasta base
+    .replace('.jsx', '')        // Remove a extensão
+    .toLowerCase();             // Deixa a rota em minúsculas
+
+  // Verifica e ajusta a rota para a página inicial
+  const adjustedPath = routePath === '/homepage' ? '/' : routePath;
+
+  console.log(`Página carregada: ${adjustedPath}, Componente: ${Component ? Component.name : 'Não encontrado'}`);  // Log da rota gerada
+
+  return { path: adjustedPath, Component };
 });
 
-const App = () => {
-  const { currentComponent } = useNavigation();
+// Função para adicionar os logs de navegação
+ 
 
+const App = () => {
   return (
-    <Layout>
-      {pages.map(({ componentName, component }) => {
-        if (currentComponent === componentName) {
-          return React.createElement(component, { key: componentName });
-        }
-        return null;
-      })}
-    </Layout>
+    <Router> 
+      <Layout>
+        <Routes>
+          {pages.map(({ path, Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          ))}
+        </Routes>
+      </Layout>
+    </Router>
   );
 };
 
-const AppWrapper = () => (
-  <NavigationProvider>
-    <App />
-  </NavigationProvider>
-);
-
-export default AppWrapper;
+export default App;

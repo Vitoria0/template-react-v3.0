@@ -10,12 +10,10 @@ import {
 	CircularProgress,
 	Alert,
 } from '@mui/material';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { useNavigation } from '../../hooks/NavigationContext';
-import { loginWithEmailAndPassword, createUserWithEmailAndPassword, LoggedUser , sendResetPasswordEmail} from '../../services/authService';
+import { Visibility, VisibilityOff } from '@mui/icons-material'; 
+import { loginWithEmailAndPassword, createUserWithEmailAndPassword, LoggedUser , sendResetPasswordEmail} from '../services/authService';
 
-const Homepage = () => {
-	const { navigateTo } = useNavigation();
+const Homepage = () => { 
 	const [isVisible, setIsVisible] = useState(false);
 	const [isLogin, setIsLogin] = useState(true);
 	const [isResetPassword, setIsResetPassword] = useState(false);
@@ -56,7 +54,7 @@ const Homepage = () => {
 				await loginWithEmailAndPassword(formData.email, formData.password);
 				if (LoggedUser.get()) {
 					if (LoggedUser.get().isPaying == true) {
-						navigateTo('');
+						 window.location.href = '/Menu'
 					} else {
 						setIsPaying(true);
 					}
